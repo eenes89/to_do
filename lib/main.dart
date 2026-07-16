@@ -55,7 +55,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  final List<String> _gorevler = ["Market Alişverişi", "Ödev Yap", "Spor salonu"];
+  final List<String> _gorevler = ["Market Alişverişi", "Ödev Yap", "Spor salonu","Su iç", "Kitap oku"];
 
 
  void _gorevDurumunuKontrolEt() {
@@ -72,6 +72,9 @@ void _tumGorevleriYazdir() {
     debugPrint("${i + 1}. ${_gorevler[i]}");
   }
 }
+int _gorevSayisiniGetir() {
+  return _gorevler.length;
+}
 
   void _incrementCounter() {
     setState(() {
@@ -83,6 +86,7 @@ void _tumGorevleriYazdir() {
       _counter++;
       _gorevDurumunuKontrolEt();
       _tumGorevleriYazdir();
+      _gorevSayisiniGetir();
     });
   }
 
