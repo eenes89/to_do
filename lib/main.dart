@@ -86,7 +86,7 @@ int _gorevSayisiniGetir() {
       _counter++;
       _gorevDurumunuKontrolEt();
       _tumGorevleriYazdir();
-      _gorevSayisiniGetir();
+      debugPrint("Toplam görev sayısı: ${_gorevSayisiniGetir()}");
     });
   }
 
