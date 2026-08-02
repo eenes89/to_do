@@ -93,7 +93,7 @@ int _gorevSayisiniGetir() {
   @override
   Widget build(BuildContext context) {
    List<Widget> gorevWidgetleri = [];
-   for(int i = 0; i < gorevWidgetleri.length; i++) {
+   for(int i = 0; i < _gorevler.length; i++) {
     gorevWidgetleri.add(Text('${i + 1}. ${_gorevler[i]}'));
    }
    
