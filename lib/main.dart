@@ -92,12 +92,11 @@ int _gorevSayisiniGetir() {
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
+   List<Widget> gorevWidgetleri = [];
+   for(int i = 0; i < gorevWidgetleri.length; i++) {
+    gorevWidgetleri.add(Text('${i + 1}. ${_gorevler[i]}'));
+   }
+   
     return Scaffold(
       appBar: AppBar(
         // TRY THIS: Try changing the color here to a specific color (to
@@ -132,6 +131,9 @@ int _gorevSayisiniGetir() {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            const SizedBox(height: 20),
+            const Text('Görevleriniz:'),
+            Column(children: gorevWidgetleri),
           ],
         ),
       ),
